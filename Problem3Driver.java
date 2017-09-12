@@ -7,7 +7,7 @@ public class Problem3Driver implements Directions
 {
     public static void main(String args[])  {
         Problem3 lucy = new Problem3(1,6,North,0);
-        lucy.closeAllWindows();
+        lucy.checkWindows();
         lucy.turnOff();
         
     } 

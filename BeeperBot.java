@@ -20,7 +20,6 @@ public class BeeperBot extends Robot
             collectBeepers();
             collectBeepers();
     }
-   
 }
 
 public void collectBeepers() {
@@ -43,11 +42,11 @@ public void findABeeperColumn(){
 }
 
 public void collectColumn(){
-    turnLeft();
-    while(nextToABeeper()) {
-    pickBeeper();
-    move();
-}
+        turnLeft();
+        while(nextToABeeper()) {
+        pickBeeper();
+        move();
+    }
 }
 
 public void returnToFloor() {

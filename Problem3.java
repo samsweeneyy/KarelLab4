@@ -11,9 +11,34 @@ public class Problem3 extends Robot
         super(st, av, dir, numBeepers);
     }
     
-    public void closeAllWindows() {
-        
+        public void closeWindows() {
+        checkWindows();
     }
-   
+    
+        public void checkWindows() {
+            turnRight();
+            while (!frontIsClear()) {
+                 turnLeft();
+                 if (frontIsClear()) {
+                 move();
+                 turnRight();
+                }
+                 else { 
+                    turnLeft();
+                    move();
+                    turnRight();
+                }
+            }
+            if (frontIsClear()){
+                putBeeper();
+        }
+    }
+    
+    public void turnRight() {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
 }
+
 
