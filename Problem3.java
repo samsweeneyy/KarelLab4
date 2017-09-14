@@ -12,7 +12,9 @@ public class Problem3 extends Robot
     }
     
         public void closeWindows() {
-        checkWindows();
+        while(!nextToABeeper()) {    
+            checkWindows();
+        }
     }
     
         public void checkWindows() {
@@ -29,9 +31,11 @@ public class Problem3 extends Robot
                     turnRight();
                 }
             }
-            if (frontIsClear()){
+            if (frontIsClear() && !nextToABeeper()){
                 putBeeper();
-        }
+                turnLeft();
+                move();
+            }
     }
     
     public void turnRight() {
